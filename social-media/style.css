@@ -1,0 +1,100 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, purple 20%, orange 80%);
+}
+section {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: inherit;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px;
+
+  border-radius: 5px;
+  background-color: lightslategray;
+
+  width: 300px;
+
+  cursor: pointer;
+}
+.menu.rotate {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.list {
+  width: 300px;
+
+  overflow: hidden;
+}
+.menu p {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.fa-solid {
+}
+.fa-chevron-down {
+  transition: transform 0.2s;
+}
+
+.rotate .fa-chevron-down {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.soc-list {
+  position: relative;
+  background-color: lightslategray;
+
+  margin: -10px;
+  padding: 10px;
+
+  list-style: none;
+  transition: transform 1s;
+}
+
+.soc-list li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: padding 0.4s linear;
+}
+
+.soc-list li:hover {
+  background-color: darkblue;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.fa-brands {
+  margin: 0 10px;
+}
+.fa-facebook {
+}
+.fa-youtube {
+}
+.fa-twitter {
+}
+.fa-linkedin {
+}
+
+.hide {
+  position: relative;
+  transform: translateY(-100%);
+}

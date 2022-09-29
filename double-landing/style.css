@@ -1,0 +1,89 @@
+body a {
+  position: absolute;
+  z-index: 11;
+}
+
+section {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+}
+
+h1 {
+  font-size: 100px;
+  color: beige;
+  backdrop-filter: brightness(0.5);
+  letter-spacing: 4px;
+}
+
+.split {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.left {
+  position: absolute;
+  left: 0;
+
+  background-color: tomato;
+  background-image: url("https://o-prirode.ru/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2018/09/Tigers_Grass_565301_2048x2732-1.jpg.webp");
+  background-size: cover;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  background-color: darkorchid;
+  background-image: url("https://o-prirode.ru/wp-content/uploads/2018/09/tigr-khishchnik-klyki-1536x1152.jpg");
+  background-size: cover;
+}
+
+.left .btn {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+
+.btn {
+  background-color: black;
+  color: darkgrey;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color 1s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: darkgrey;
+  color: black;
+}
+
+.active-left .left {
+  width: 75%;
+}
+
+.active-left .right {
+  width: 25%;
+}
+
+.active-right .right {
+  width: 75%;
+}
+
+.active-right .left {
+  width: 25%;
+}
+
+.left,
+.right {
+  transition: width 2s linear;
+}
