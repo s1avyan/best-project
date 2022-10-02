@@ -1,0 +1,114 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: aqua;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+.progres-container {
+  width: 500px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.progress-bar-back {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border: none;
+  z-index: -1;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.progress-bar-front {
+  position: absolute;
+  height: 4px;
+  width: 0%;
+  background-color: green;
+  border: none;
+  z-index: -1;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: width linear 0.4s;
+}
+.step {
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid crimson;
+  color: red;
+}
+.step.checked {
+  color: green;
+  border-color: green;
+  transition: all 0.4s linear;
+  transition-delay: 0.3s;
+}
+
+.step.checked small {
+  position: absolute;
+  bottom: -20px;
+  font-family: cursive;
+}
+.fa-solid {
+}
+.fa-check {
+}
+.fas {
+}
+.fa-times {
+}
+.btn {
+  background-color: blue;
+  border: none;
+  color: azure;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 70px 10px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.btn:disabled {
+  background-color: red;
+}
+.btn:hover,
+.btn:focus {
+  opacity: 0.9;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.prev {
+}
+.fa-arrow-left {
+}
+.next {
+}
+.fa-arrow-right {
+}
+
+@media (max-width: 500px) {
+  .progres-container {
+    width: 90vw;
+  }
+}

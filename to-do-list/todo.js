@@ -4,7 +4,7 @@ const refs = {
   listForAdd: document.querySelector(".list"),
   newLiTask: document.querySelectorAll("li"),
 };
-let list = JSON.parse(localStorage.getItem("list"));
+let list = JSON.parse(localStorage.getItem("list") || "[]");
 
 list.forEach((task) => {
   toDoList(task);
